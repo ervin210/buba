@@ -15,14 +15,14 @@ FROM gcr.io/bitnami-containers/minideb-extras:jessie-r14-buildpack
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
-ENV STACKSMITH_STACK_ID="ac7ca9x" \
+ENV STACKSMITH_STACK_ID="ya49f3q" \
     STACKSMITH_STACK_NAME="Node.js for ervin210/buba" \
     STACKSMITH_STACK_PRIVATE="1"
 
 # Install required system packages
 RUN install_packages libc6 libssl1.0.0 libncurses5 libtinfo5 libsqlite3-0 zlib1g libbz2-1.0 libreadline6 libstdc++6 libgcc1 ghostscript imagemagick libmysqlclient18
 
-RUN bitnami-pkg install node-7.10.0-0 --checksum 7209e62e60335308287cba38bc18fb34245d41b86bc7ffd3ad26413f186c529b
+RUN bitnami-pkg install node-8.2.1-0 --checksum 6e4c108b2484ff6d6215c180ab20986231154132b382b34ab1c86453dfea620a
 
 ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
     NODE_PATH=/opt/bitnami/node/lib/node_modules
